@@ -1,0 +1,14 @@
+h1 {
+    color: pink;
+    font-size: 48px;
+    text-align: center;
+
+}
+
+.webg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none; 
+    z-index: -1;
+}
