@@ -1,4 +1,17 @@
 import * as THREE from 'three';
+import { OrbitControls } from 'OrbitControls';
+import * as dat from 'lil-gui';
+/**** 
+ * SETUP * 
+ */
+
+// Sizes
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+    aspectRatio: window.innerWidth / window.innerHeight
+}
+
 
 /*********
  * Scene *
@@ -17,7 +30,7 @@ scene.background = new THREE.Color('pink')
 //Camera
 const camera = new THREE.PerspectiveCamera(
     75,
-     window.innerWidth / window.innerHeight,
+     sizes.aspectRatio, 
     0.1,
     100
 )
@@ -30,8 +43,10 @@ const renderer = new THREE.WebGLRenderer({
     antialias: true
 })
 
-renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.setSize(sizes.width, sizes.height)
 
+// Controls 
+const controls = new OrbitControls(camera, canvas)
 /*
 ** MESHES **
 */
@@ -44,6 +59,10 @@ const testSphere = new THREE.Mesh(testSphereGeometry, sphereMaterial)
 
 scene.add(testSphere)
 
+//* UI ** //
+const gui = new dat.GUI()
+
+
 
 
 
@@ -55,6 +74,10 @@ scene.add(testSphere)
 const clock = new THREE.Clock();
 const animation = () => {
     // Return elapsed time
+    const elapsedTime = clock.getElapsedTime()
+
+    // Update Controls
+    controls.update()
 
     //Renderer
     renderer.render(scene, camera)
