@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plato's Cave - Flatness & Seeing Double</title>
+
+    <!--three.js import map-->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://ga.jspm.io/npm:three@0.182.0/build/three.module.js", 
+            "OrbitControls": "https://ga.jspm.io/npm:three@0.182.0/examples/jsm/controls/OrbitControls.js"
+        }
+    }
+    </script> 
+
+    <!--link to the css file-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--three.js scene-->
+    <script src="script.js" type="module"></script>
+</head>
+
+<body>
+    <div class="split-container">
+        <!-- Left side: Text content -->
+        <div class="text-side">
+            <div class="content-container">
+                <header>
+                    <h1> Flatness</h1>
+                </header>
+
+                <section class="part part-1">
+                    <h2>Part 1: Inside the Cave - A Flat Reality</h2>
+                    
+                    <div class="text-content">
+                        <p>
+                            Honestly, imagine the people outside the cave who have been here for a long time now, they were always forced to stare at the wall. 
+                            every day, they tend to see shadows moving on the wall and the shapes that look like a person, animal like birb or an objects. So, these 
+                            shadows are all they know so they only believe these shadows are the real things because these people have never seen anything else besides that.
+
+                        
+                        </p>
+                        
+                        <p>
+                            This is what I think Nick Sousanis describe what <strong>Flatness</strong> is. According to the book, flatness is a a state of being trapped in one 
+                            perspective where you are unable to perceive in the full dimension  of reality. Flatness isn't just about physical 
+                            limitation. it is also a way of thinking that prevents you from understanding the full picture. I think when the people inside the cave experience flatness, they already believe what they see in front of them is all there is. In the Cave, 
+                            the people cannot see the fire, any objects, or even the people outside the cave. The only thing they see is the flat images on the wall because the chains keep them stuck and due to it, it also keeps their minds from being able to imagine
+                            anything other than what they see, so they are just trapped in a flat reality. Therefore, flatness is not only seeing things from one perspective of view, it is also not realizing there are other ways to look and understand the world.
+                            It is like thinking everything is all flat because you only look at the flat surface but never look at even bigger picture that may be hidden behind what you see. 
+                        
+                        </p>
+                             
+                            <a href="#" class="animation-link" data-animation="shadow-dance">Watch how the shadows dance like people in the cave do </a> as  
+                            you can observe how they see these shapes in their view!
+                            <a href="#" class="animation-link" data-animation="shadow-morph">As the shadow changes and moves around, they can trick the mind of the people in the cave and make them believe those images are real</a> 
+                           
+                        </p>
+                        
+                      
+                    </div>
+
+                    <button class="view-switch" data-view="inside">View from Inside the Cave</button>
+                </section>
+
+                <section class="part part-2">
+                    <h2>Part 2: Outside the Cave</h2>
+                    
+                    <div class="text-content">
+                        Outside the cave, the people live in the surface under the bright sun. They can see real birbs flying in the sky, real objects they can touch, and see the fire that creates the shadows in the wall. They have no idea 
+                            about the people stuck in the cave nor the shadows in the wall. To them, these things that they see are real things. 
+                        </p>
+                        
+                        <p>
+                            This shows what <strong>Seeing Double</strong> is, as Nick Sousanis describes it as the way of understanding that the same thing can be experienced in many different ways depends on how and where you look at it. Outside the cave,
+                            they can see the real object that actually have depth and solid to itself. However, when the fire reflects shine on these objects, they will cast shadows on the wall. These shadows look flat and are different compared to the real things. The shadows are just 2d dimensional replicate images of the real things.
+                            This can also mean that what seems true on the outside of the cave doesn't necessarily look the same on the inside. Realizing that reality can have different layers like shadows and real objects, is what <strong>Seeing Double</strong> is about.
+                            
+                        
+
+                            <a href="#" class="animation-link" data-animation="object-float">See the objects float in the firelight</a>, 
+                            or watch as 
+                            <a href="#" class="animation-link" data-animation="bird-flight">a bird takes flight</a>, 
+                            creating living shadows for the the people thats stuck in the cave.
+                        </p>
+                        
+                        <p>
+                           The way shadows are created to show how one reality can create another. Outside the cave, people hold objects in front of a fire. The fire shines on the objects and reflects the shadows on the wall where the 'people' that is stuck in the cave sit. 
+                           Because of how light works, the three-dimensional objects outside become flat shadows on the wall. 
+                           
+                           In conclusion, the story on the Plato cave teaches me from reading it that our perceptions can be limited and that there are many layers about reality. 
+                           Flatness helps me to understand by showing how we can be trapped in one way of thinking, which only seeing shadows and missing out on the bigger picture.
+                            Seeing double reminds me that the same thing can look very different depending on where we are and how we see it. 
+                            I believe understanding these ideas helps us open more on our minds and realize that truth is not just one simple thing, but it is more of the mixture from perspectives. True freedom comes when we learn to see beyond the shadows and understand the deeper reality around us.
+                        </p>
+                    </div>
+
+                    <button class="view-switch" data-view="outside">View from Outside the Cave</button>
+                </section>
+            </div>
+        </div>
+
+        <!-- Right side: 3D Cave scene -->
+        <div class="scene-side">
+            <canvas class="webgl"></canvas>
+        </div>
+    </div>
+</body>
+</html>
