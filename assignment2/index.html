@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <head>
-    <title>Data Visualization</title>
-
-    <!--css-->
+    <title>A Silent Voice — Data Visualization</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!--three.js importmap-->
-        <script type="importmap">
-        {
-            "imports": {
-                "three": "https://ga.jspm.io/npm:three@0.182.0/build/three.module.js",
-                "OrbitControls": "https://ga.jspm.io/npm:three@0.182.0/examples/jsm/controls/OrbitControls.js",
-                "lil-gui": "https://ga.jspm.io/npm:lil-gui@0.21.0/dist/lil-gui.esm.js"
-            }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://ga.jspm.io/npm:three@0.182.0/build/three.module.js",
+            "OrbitControls": "https://ga.jspm.io/npm:three@0.182.0/examples/jsm/controls/OrbitControls.js",
+            "lil-gui": "https://ga.jspm.io/npm:lil-gui@0.21.0/dist/lil-gui.esm.js"
         }
-        </script>
-
-    <!--three.js scene-->
+    }
+    </script>
     <script src="script.js" type="module"></script>
-
 </head>
 
 <body>
-    <h1><a href="text.html" target="_blank">Gossip girl</a></h1>
-    <canvas class = "webgl"></canvas>
+    <h1><a href="text.html" target="_blank">A Silent Voice</a></h1>
+    <p class="subtitle">聲の形 &nbsp;·&nbsp; Text Data Visualization</p>
+
+    <div id="presentation-panel">
+        <p class="panel-hint">Click a term to show or hide it idk</p>
+        <div id="toggle-buttons"></div>
+        <div id="story-card">
+            <h2 id="card-heading"></h2>
+            <p id="card-body"></p>
+        </div>
+    </div>
+
+    <div class="hint">drag to orbit &nbsp;·&nbsp; scroll to zoom</div>
+    <canvas class="webgl"></canvas>
 </body>
